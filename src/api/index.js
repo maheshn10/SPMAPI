@@ -4,6 +4,7 @@ import auth from './auth'
 import passwordReset from './password-reset'
 import company from './company'
 import role from './role'
+import employee from './employee'
 
 const router = new Router()
 
@@ -35,5 +36,6 @@ router.use('/auth', auth)
 router.use('/password-resets', passwordReset)
 router.use('/companies', company)
 router.use('/roles', role)
+router.use('/employees', employee)
 
 export default router
