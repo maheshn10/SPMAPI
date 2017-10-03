@@ -2,13 +2,19 @@ import mongoose, { Schema } from 'mongoose'
 
 const companySchema = new Schema({
   name: {
-    type: String
+    type: String,
+    index: true,
+    trim: true
   },
   address: {
-    type: String
+    type: String,
+    index: true,
+    trim: true
   },
   website: {
-    type: String
+    type: String,
+    index: true,
+    trim: true
   }
 }, {
   timestamps: true

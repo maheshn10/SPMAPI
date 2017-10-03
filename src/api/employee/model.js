@@ -1,5 +1,14 @@
 import mongoose, { Schema } from 'mongoose'
 
+// const addressSchema = new Schema({
+//   AddressType: {
+//     type: String
+//   },
+//   AddressLine1: {
+//     type: String
+//   }
+// })
+
 const employeeSchema = new Schema({
   FirstName: {
     type: String
@@ -57,7 +66,8 @@ const employeeSchema = new Schema({
   },
   CertificateEndDate: {
     type: String
-  }
+  },
+  Addresses: [{ AddressType: String, AddressLine1: String }]
 }, {
   timestamps: true
 })
@@ -86,6 +96,7 @@ employeeSchema.methods = {
       ChallengeStatus: this.ChallengeStatus,
       CertificateStartDate: this.CertificateStartDate,
       CertificateEndDate: this.CertificateEndDate,
+      Addresses: this.Addresses,
       createdAt: this.createdAt,
       updatedAt: this.updatedAt
     }
